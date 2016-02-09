@@ -1,0 +1,404 @@
+#!update
+
+[jetnexusdaemon-LocalInterface3]
+3.1="80"
+3.2="135"
+3.3="443"
+3.4="444"
+3.5="5061"
+3.6="5065"
+3.7="5068"
+3.8="5069"
+3.9="5070"
+3.10="5071"
+3.11="5072"
+3.12="5073"
+3.13="5074"
+3.14="5075"
+3.15="5076"
+3.16="5080"
+Enabled=1
+Netmask="255.255.255.0"
+
+
+[jetnexusdaemon-LocalInterface3.1]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:80,Y,""Lync Front End Server 1"""
+3="12.12.12.12:80,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd HTTP"
+SNAT=0
+SSL=0
+SSLClient=0
+
+
+
+[jetnexusdaemon-LocalInterface3.2]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:135,Y,""Lync Front End Server 1"""
+3="12.12.12.12:135,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=0
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Internal Web Services"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.3]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:443,Y,""Lync Front End Server 1"""
+3="12.12.12.12:443,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd HTTPS Internal"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.4]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:444,Y,""Lync Front End Server 1"""
+3="12.12.12.12:444,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Conferencing"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.5]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5061,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5061,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd SIP/TLS"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.6]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5065,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5065,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Application Share"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.7]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5068,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5068,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Mediation SIP"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface.8]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5069,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5069,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd QoE Agent"
+SNAT=0
+SSL=0
+SSLClient=0
+
+
+[jetnexusdaemon-LocalInterface3.9]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5070,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5070,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Mediation Server"
+SNAT=0
+SSL=0
+SSLClient=0
+
+
+[jetnexusdaemon-LocalInterface3.10]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5071,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5071,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Response Groups"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.11]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5072,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5072,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Conferencing Attendant"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.12]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5073,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5073,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Conferencing Announcement"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.13]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5074,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5074,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Outside Voice Control"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.14]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5075,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5075,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Test Call"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.15]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5076,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5076,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Test Call Quality"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.16]
+1=">,""Front End Servers"",2000,"
+2="11.11.11.11:5080,Y,""Lync Front End Server 1"""
+3="12.12.12.12:5080,Y,""Lync Front End Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncFrontEnd Test Call"
+SNAT=0
+SSL=0
+SSLClient=0
+
+
+
+
+[jetnexusdaemon-LocalInterfaces]
+3="3.3.3.3"
+
+
+
+

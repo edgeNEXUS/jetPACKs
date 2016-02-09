@@ -1,0 +1,76 @@
+#!update
+
+[jetnexusdaemon]
+
+ContentServerCustomTimer=20000
+
+[jetnexusdaemon-Csm-Rules-0]
+Content="401"
+Desc="Check for 401 Challenge"
+Method="CheckResponse"
+Name="401 Challenge"
+Url="/"
+
+[jetnexusdaemon-Csm-Rules-1]
+Content="AET Value"
+Desc="Check Echoscu"
+Method="Custom"
+Name="DICOM"
+Url="preset/dicom.pl"
+
+
+[jetnexusdaemon-LocalInterface4]
+4.1="80"
+4.2="104"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface4.1]
+1=">,Synapse,2000,"
+2="11.11.11.11:80,Y,""Synapse 1"""
+3="12.12.12.12:80,Y,""Synapse 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="CookieBased"
+MaxConnections=10000
+MonitoringPolicy="0"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="Synapse"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface4.2]
+1=">,""Server Group"",2000,"
+2="21.21.21.21:104,Y,""PACS 1"""
+3="22.22.22.22:104,Y,""PACS 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="LeastConnections"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="DICOM(104)"
+ServiceDesc="DICOM"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterfaces]
+4="4.4.4.4"

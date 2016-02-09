@@ -1,0 +1,38 @@
+#!update
+
+[jetnexusdaemon-LocalInterface3]
+3.1="3389"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface3.1]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:3389,Y,""RDP 1"""
+3="12.12.12.12:3389,Y,""RDP 2"""
+4="13.13.13.13:3389,Y,""RDP 3"""
+5="14.14.14.14:3389,Y,""RDP 4"""
+AddressResolution=0
+Basic=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+Connectivity="managed"
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="RDP"
+PassThrough=1
+Protocol="RDP"
+ServiceDesc="RDP"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterfaces]
+3="3.3.3.3"
+

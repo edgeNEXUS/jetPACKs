@@ -1,0 +1,154 @@
+#!update
+
+[jetnexusdaemon]
+
+ConnectionTimeout=7200000
+
+[jetnexusdaemon-Csm-Rules-10]
+Content=
+Desc="L7 Healthcheck for OWA"
+Method="Check200"
+Name="Ex2010 OWA"
+Url="/owa/auth/logon.aspx"
+
+[jetnexusdaemon-Csm-Rules-11]
+Content=
+Desc="L7 health check for OA"
+Method="Check200"
+Name="Ex2010 RPC"
+Url="/rpc/rpcproxy.dll"
+
+[jetnexusdaemon-Csm-Rules-12]
+Content=
+Desc="L7 health check for Active Sync"
+Method="Check200"
+Name="Ex2010 Active Sync"
+Url="/Microsoft-Server-ActiveSync/"
+
+[jetnexusdaemon-Csm-Rules-13]
+Content=
+Desc="L7 health check for Autodiscover"
+Method="Check200"
+Name="Ex2010 Autodiscover"
+Url="/autodiscover/autodiscover.xml"
+
+[jetnexusdaemon-Csm-Rules-14]
+Content=
+Desc="L7 health check for ECP"
+Method="Check200"
+Name="Ex2010 ECP"
+Url="/ecp"
+
+[jetnexusdaemon-Csm-Rules-15]
+Content=
+Desc="L7 health check for EWS"
+Method="Check200"
+Name="Ex2010 EWS"
+Url="/ews"
+
+[jetnexusdaemon-LocalInterface3]
+3.1="135"
+3.2="59534"
+3.3="59535"
+3.4="443"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface3.1]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:135,Y,""Exchange 2010 RPC Srv1"""
+3="12.12.12.12:135,Y,""Exchange 2010 RPC Srv2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="RPC"
+ServiceDesc="EX2k10 RPC"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.2]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:59534,Y,""Exchange 2010 RPC Srv1"""
+3="12.12.12.12:59534,Y,""Exchange 2010 RPC Srv2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="RPC"
+ServiceDesc="EX2010 Static RPC/CA/PF"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.3]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:59535,Y,""Exchange 2010 RPC Srv1"""
+3="12.12.12.12:59535,Y,""Exchange 2010 RPC Srv2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="RPC"
+ServiceDesc="EX2K10 Static RPC/ADS"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.4]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:443,Y,""Outlook Web Services Exchange 2010 RPC Srv1"""
+3="12.12.12.12:443,Y,""Outlook Web Services Exchange 2010 RPC Srv2"""
+AddressResolution=0
+CachePort=0
+CertificateName="default"
+ClientCertificateName="Any"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="CookieBased"
+MaxConnections=10000
+MonitoringPolicy="10"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="EX2010 OWA"
+SNAT=0
+SSL=1
+SSLClient=1
+
+
+[jetnexusdaemon-LocalInterfaces]
+3="3.3.3.3"
+
+

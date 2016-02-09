@@ -1,0 +1,185 @@
+#!update
+
+[jetnexusdaemon-LocalInterface1]
+1.1="443"
+1.2="444"
+1.3="5061"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface1.1]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:443,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:443,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal AV"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface1.2]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:444,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:444,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal Web Conf"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface1.3]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:5061,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:5061,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal SIP"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterfaces]
+1="1.1.1.1"
+
+[jetnexusdaemon-network-0]
+Adapter="0"
+Address="192.168.101.5"
+Desc="Green Side"
+Mask="255.255.255.0"
+
+[jetnexusdaemon-pcnet32]
+1000Auto=""
+1000Full=""
+1000Half=""
+100Auto=""
+100Full="options=14"
+100Half="options=13"
+10Auto=""
+10Full="options=10"
+10Half="options=9"
+Auto=""
+options="options pcnet32"
+
+[jetnexusdaemon-Reports-AllowedBrowsers]
+101="I E 4."
+102="I E 5."
+103="I E 5.0"
+104="I E 5.5"
+105="I E 6.0"
+201="Netscape 4."
+202="Netscape 6."
+203="Netscape 7."
+204="Netscape"
+210="FireFox"
+211="Mozilla"
+220="Opera 8."
+221="Opera 7."
+222="Opera"
+230="Konqueror"
+240="Eazel"
+
+[jetnexusdaemon-Reports-ContentTypes]
+1="text/html=HTML"
+2="text/css=Style Sheet"
+3="application/x-javascript=JavaScript"
+4="text/xml=XML"
+5="text/plain=Plain Text"
+6="application/x-flash"
+7="image/gif=GIF"
+8="image/jpeg=JPEG"
+9="image/jfif=JFIF"
+
+[jetnexusdaemon-Reports-ResponseCodes]
+100="Continue"
+101="Switching Protocols"
+102="Processing"
+200="OK"
+201="Created"
+202="Accepted"
+203="Non-Authoratative Information"
+204="No Content"
+205="Reset Content"
+206="Partial Content"
+207="Multi-Status"
+300="Multiple Choices"
+301="Moved Permanently"
+302="Found"
+303="See Other"
+304="Not Modified"
+305="Use Proxy"
+307="Temporary Redirect"
+400="Bad Request"
+401="Unauthorized"
+402="Payment Required"
+403="Forbidden"
+404="Not Found"
+405="Method Not Allowed"
+406="Not Acceptable"
+407="Proxy Authentication Required"
+408="Request Timeout"
+409="Conflict"
+410="Gone"
+411="Length Required"
+412="Precondition Failed"
+413="Request Entity Too Large"
+414="Request URI Too Long"
+415="Unsupported Media Type"
+416="Request Range Not Satisfied"
+417="Expectation Failed"
+422="Unprocessable Entity"
+423="Locked"
+424="Failed Dependency"
+426="Upgrade Required"
+500="Internal Server Error"
+501="Not Implemented"
+502="Bad Gateway"
+503="Service Unavailable"
+504="Gateway Timeout"
+505="Version Number Not Supported"
+507="Insufficient Storage"
+
+[jetnexusdaemon-Startup]
+
+[jetnexusdaemon-UserOverrides]
+
+[]
+

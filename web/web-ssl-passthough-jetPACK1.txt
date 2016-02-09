@@ -1,0 +1,46 @@
+#!update
+
+
+[jetnexusdaemon-Csm-Rules-0]
+Content=
+Desc="Check home page for 200 OK"
+Method="Check200"
+Name="200OK"
+Url="/"
+
+[jetnexusdaemon-LocalInterface1]
+1.1="443"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface1.1]
+1=">,""Server Group"",2000,"
+2="11.11.11.11:443,Y,""Web Server 1"""
+3="12.12.12.12:443,Y,""Web Server  2"""
+4="13.13.13.13:443,Y,""Web Server 3"""
+5="14.14.14.14:443,Y,""Web Server 4"""
+AddressResolution=0
+Basic=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+Connectivity="managed"
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPListBased"
+MaxConnections=10000
+MonitoringPolicy="0"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="Web Service - SSL Passthrough"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterfaces]
+1="1.1.1.1"
+

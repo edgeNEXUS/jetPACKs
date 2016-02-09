@@ -1,0 +1,79 @@
+#!update
+
+[jetnexusdaemon]
+jnCookieHeader="MS-WSMAN"
+
+[jetnexusdaemon-Csm-Rules-0]
+Content=
+Desc="Lync L7 Health Check"
+Method="Check200"
+Name="Lync L7 Health Check"
+Url="/Dialin/Conference.aspx"
+
+[jetnexusdaemon-LocalInterface2]
+2.1="80"
+2.2="443"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface2.1]
+1=">,""Used to redirect http to https"",2000,"
+2="11.11.11.11:8080,Y,""Lync Front End Server1"""
+3="12.12.12.12:8080,Y,""Lync Front End Server2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="LeastConnections"
+MaxConnections=10000
+MonitoringPolicy="0"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="HTTP to HTTPS Channel"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface2.1-Path]
+1="41"
+
+[jetnexusdaemon-LocalInterface2.2]
+1=">,""Front End Pool"",2000,"
+2="11.11.11.11:4443,Y,""Lync Front End Server1"""
+3="12.12.12.12:4443,Y,""Lync Front End Server2"""
+AddressResolution=0
+CachePort=0
+CertificateName="default"
+ClientCertificateName="Any"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="CookieBased"
+MaxConnections=10000
+MonitoringPolicy="0"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="Lync Reverse Proxy External Web Services"
+SNAT=0
+SSL=1
+SSLClient=1
+
+[jetnexusdaemon-LocalInterfaces]
+2="2.2.2.2"
+
+[jetnexusdaemon-Path-41]
+Desc="Everything redirected to HTTPS"
+Name="Force all to HTTPS"
+
+[jetnexusdaemon-Path-41-Function-1]
+Action="redirect"
+Target="https://$host$$path$$querystring$"
+Value=

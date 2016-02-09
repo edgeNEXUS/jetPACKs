@@ -1,0 +1,5 @@
+#!update
+
+jnCookieHeader="OracleEBS"
+PersistentCookies=720
+CblbHttpOnly=0

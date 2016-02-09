@@ -1,0 +1,141 @@
+#!update
+
+
+[jetnexusdaemon-Csm-Rules-0]
+Content="200 OK"
+Desc="Exchange 2013 Outlook Web App"
+Method="CheckResponse"
+Name="Monitoring OWA"
+Url="/owa/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-1]
+Content="200 OK"
+Desc="Exchange 2013 Outlook Anywhere"
+Method="CheckResponse"
+Name="Monitoring OA"
+Url="/rpc/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-2]
+Content="200 OK"
+Desc="Exchange 2013 Web Services"
+Method="CheckResponse"
+Name="Monitoring EWS"
+Url="/ews/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-3]
+Content="200 OK"
+Desc="Exchange 2013 ActiveSync"
+Method="CheckResponse"
+Name="Monitoring EAS"
+Url="/Microsoft-Server-ActiveSync/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-4]
+Content="200 OK"
+Desc="Exchange 2013 Control Panel"
+Method="CheckResponse"
+Name="Monitoring ECP"
+Url="/ecp/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-5]
+Content="200 OK"
+Desc="Exchange 2013 Autodiscover Service"
+Method="CheckResponse"
+Name="Monitoring ADS"
+Url="/autodiscover/healthcheck.htm"
+
+[jetnexusdaemon-Csm-Rules-6]
+Content="200 OK"
+Desc="Exchange 2013 Offline Address Book"
+Method="CheckResponse"
+Name="Monitoring OAB"
+Url="/oab/healthcheck.htm"
+
+
+
+[jetnexusdaemon-LocalInterface3]
+3.1="80"
+3.2="443"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface3.1]
+1=">,""Redirect Service"",2000,"
+2="11.11.11.11:80,Y,""Exchange 2013 Redirect to HTTPS"""
+3="12.12.12.12:80,Y,""Exchange 2013 Redirect to HTTPS"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="LeastConnections"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="Redirect to HTTPS Service"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface3.1-Path]
+1="21"
+
+[jetnexusdaemon-LocalInterface3.2]
+1=">,""Exchange 2013 Real Servers"",2000,"
+2="11.11.11.11:443,Y,""All Exchange 2013 Services"""
+3="12.12.12.12:443,Y,""All Exchange 2013 Services"""
+AddressResolution=0
+CachePort=0
+CertificateName="default"
+ClientCertificateName="Any"
+Compress=1
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="LeastConnections"
+MaxConnections=10000
+MonitoringPolicy="1"
+PassThrough=0
+Protocol="Accelerate HTTP"
+ServiceDesc="All Exchange 2013 Traffic"
+SNAT=0
+SSL=1
+SSLClient=1
+SSLInternalPort=27400
+
+[jetnexusdaemon-LocalInterface3.2-Path]
+1="22"
+
+[jetnexusdaemon-LocalInterfaces]
+3="3.3.3.3"
+
+[jetnexusdaemon-Path-22]
+Desc="Redirect if the path just contains /"
+Name="Redirect to /owa"
+
+[jetnexusdaemon-Path-22-Condition-1]
+Check="equal"
+Condition="path"
+Match=
+Sense="does"
+Value="/"
+
+[jetnexusdaemon-Path-22-Function-1]
+Action="redirect"
+Target="https://$host$/owa/"
+Value=
+
+[jetnexusdaemon-Path-21]
+Desc="Redirect all http traffic to https"
+Name="Redirect to HTTPS"
+
+[jetnexusdaemon-Path-21-Function-1]
+Action="redirect1"
+Target="https://$host$$path$"
+Value=

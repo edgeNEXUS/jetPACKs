@@ -1,0 +1,4 @@
+#!update
+
+[jetnexusdaemon]
+ApiSessionTimeout=86400

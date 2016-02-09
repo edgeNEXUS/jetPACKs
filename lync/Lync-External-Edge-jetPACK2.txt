@@ -1,0 +1,82 @@
+#!update
+
+[jetnexusdaemon-LocalInterface2]
+2.1="443"
+2.2="444"
+2.3="5061"
+Enabled=1
+Netmask="255.255.255.0"
+PrimaryV2=
+
+[jetnexusdaemon-LocalInterface2.1]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:443,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:443,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal AV"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface2.2]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:444,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:444,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal Web Conf"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterface2.3]
+1=">,""Lync External Edge Server Group"",2000,"
+2="11.11.11.11:5061,Y,""Lync External Edge Server 1"""
+3="12.12.12.12:5061,Y,""Lync External Edge Server 2"""
+AddressResolution=0
+CachePort=0
+CertificateName="No SSL"
+ClientCertificateName="No SSL"
+Compress=0
+ConnectionLimiting=0
+DSR=0
+DSRProto="tcp"
+Enabled=1
+LoadBalancePolicy="IPBased"
+MaxConnections=10000
+MonitoringPolicy="Connect"
+PassThrough=1
+Protocol="Layer 4"
+ServiceDesc="LyncEdgeExternal SIP"
+SNAT=0
+SSL=0
+SSLClient=0
+
+[jetnexusdaemon-LocalInterfaces]
+2="2.2.2.2"
+
