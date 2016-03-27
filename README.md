@@ -24,4 +24,4 @@ We're always happy to receive contributions and pull requests.
 
 ### License
 
-These rules are offered license and copyright free.
+These templates are offered license and copyright free.
